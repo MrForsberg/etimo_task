@@ -22,7 +22,7 @@ class View(object):
         print("****************************************")
 
     def show_invalid_input(self):
-        print("Felaktigt input")
+        print("Felaktig input")
         self.print_instructions()
 
     def item_units_has_changed(self, response):
