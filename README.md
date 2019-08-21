@@ -1,5 +1,5 @@
 # etimo_task
 Konsolapplikation lagersaldo
 
-#Prerequisites
+# Prerequisites
 Python 3.6
