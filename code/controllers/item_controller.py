@@ -38,7 +38,7 @@ class ItemController(object):
             number_of_units = int(units)
         except ValueError:
             return Utils.create_response_message(
-                         const.ITEM_DEFAULT_ADD_ERROR, 500)
+                         const.ITEM_DEFAULT_REMOVE_ERROR, 500)
         if(number_of_units == 0):
             return Utils.create_response_message(
                          const.ITEM_ZERO_UNITS_REMOVE_ERROR, 405)
