@@ -10,7 +10,11 @@ class ItemController(object):
         if (item is None):
             return Utils.create_response_message(
                          const.ITEM_NOT_FOUND, 404)
-        number_of_units = int(units)
+        try:
+            number_of_units = int(units)
+        except ValueError:
+            return Utils.create_response_message(
+                         const.ITEM_DEFAULT_ADD_ERROR, 500)
         if(number_of_units == 0):
             return Utils.create_response_message(
                          const.ITEM_ZERO_UNITS_ADD_ERROR, 403)
@@ -30,7 +34,11 @@ class ItemController(object):
         if (item is None):
             return Utils.create_response_message(
                          const.ITEM_NOT_FOUND, 404)
-        number_of_units = int(units)
+        try:
+            number_of_units = int(units)
+        except ValueError:
+            return Utils.create_response_message(
+                         const.ITEM_DEFAULT_ADD_ERROR, 500)
         if(number_of_units == 0):
             return Utils.create_response_message(
                          const.ITEM_ZERO_UNITS_REMOVE_ERROR, 405)
